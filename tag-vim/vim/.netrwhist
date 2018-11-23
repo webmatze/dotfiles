@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/mathiaskarstaedt/.vim'
+let g:netrw_dirhist_2='/Users/mathiaskarstaedt/.vim/syntax'
+let g:netrw_dirhist_3='/Users/mathiaskarstaedt/.vim'
+let g:netrw_dirhist_4='/Users/mathiaskarstaedt'
+let g:netrw_dirhist_5='/Users/mathiaskarstaedt/.vim'
+let g:netrw_dirhist_6='/Users/mathiaskarstaedt/.vim/syntax'
+let g:netrw_dirhist_7='/Users/mathiaskarstaedt/.vim'
+let g:netrw_dirhist_8='/Users/mathiaskarstaedt/.vim/colors'
