@@ -54,6 +54,11 @@ to link any new files and install new vim plugins. **Note** You _must_ run
 `rcup` after pulling to ensure that all files in plugins are properly installed,
 but you can safely run `rcup` multiple times so update early and update often!
 
+More about rcm
+--------------
+
+[rcm for rc files in dotfiles repos](https://thoughtbot.com/blog/rcm-for-rc-files-in-dotfiles-repos)
+
 
 What's in it?
 -------------
