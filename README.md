@@ -57,7 +57,8 @@ but you can safely run `rcup` multiple times so update early and update often!
 More about rcm
 --------------
 
-[rcm for rc files in dotfiles repos](https://thoughtbot.com/blog/rcm-for-rc-files-in-dotfiles-repos)
+* [rcm for rc files in dotfiles repos - Thoughtbot Blog](https://thoughtbot.com/blog/rcm-for-rc-files-in-dotfiles-repos)
+* [Manage and share your dotfiles with rcm - Upcase](https://thoughtbot.com/upcase/videos/manage-and-share-your-dotfiles-with-rcm)
 
 
 What's in it?
@@ -66,3 +67,11 @@ What's in it?
 [vim](http://www.vim.org/) configuration:
 
 * Use [dracula](https://draculatheme.com/) as theme
+
+git configuration:
+
+* pull with rebase
+* reabse with autostash and autosquash
+* rerere enabled
+* ls, ll, lc, lnc, history aliases
+* pgp with krypton
