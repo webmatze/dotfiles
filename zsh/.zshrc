@@ -20,7 +20,7 @@ PROMPT="%n@%m %1~ %# "
 
 # other configurations
 export PATH="/usr/local/sbin:$PATH"
-export PATH="~/.local/bin:$PATH"   # load lvim binary
+export PATH="$HOME/.local/bin:$PATH"   # load lvim binary
 
 # java
 export JAVA_HOME=`/usr/libexec/java_home`
