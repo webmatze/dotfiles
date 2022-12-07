@@ -69,3 +69,5 @@ add-zsh-hook chpwd load-local-conf
 
 
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
