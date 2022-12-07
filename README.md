@@ -1,77 +1,32 @@
-webmatze dotfiles
-=================
+# webmatze dotfiles
+
+## Requirements
+
+We need `stow` to be able to automatically symlink the files.
+
+```bash
+brew install stow
+```
 
 
-Requirements
-------------
-
-Use bash as your login shell:
-
-    chsh -s $(which bash)
-
-
-Install
+## Install
 -------
 
-Clone onto your laptop:
+Clone this repo to your home directory:
 
-    git clone git://github.com/webmatze/dotfiles.git ~/dotfiles
-
-Install [rcm](https://github.com/thoughtbot/rcm):
-
-    brew tap thoughtbot/formulae
-    brew install rcm
+```bash
+git clone git://github.com/webmatze/dotfiles.git ~/dotfiles
+```
 
 Install the dotfiles:
 
-    env RCRC=$HOME/.dotfiles/rcrc rcup
+```bash
+cd ~/dotfiles
+stow zsh
+```
 
-After the initial installation, you can run `rcup` without the one-time variable
-`RCRC` being set (`rcup` will symlink the repo's `rcrc` to `~/.rcrc` for future
-runs of `rcup`). [See
-example](https://github.com/thoughtbot/dotfiles/blob/master/rcrc).
+## More about stow
 
-This command will create symlinks for config files in your home directory.
-Setting the `RCRC` environment variable tells `rcup` to use standard
-configuration options:
+* [Easily manage your Linux config files with Stow](https://thoughtbot.com/blog/rcm-for-rc-files-in-dotfiles-repos)
+* [Stow manual](https://www.gnu.org/software/stow/manual/stow.html)
 
-* Exclude the `README.md` and `LICENSE` files, which are part of
-  the `dotfiles` repository but do not need to be symlinked in.
-* Give precedence to personal overrides which by default are placed in
-  `~/dotfiles-local`
-* Please configure the `rcrc` file if you'd like to make personal
-  overrides in a different directory
-
-
-Update
-------
-
-From time to time you should pull down any updates to these dotfiles, and run
-
-    rcup
-
-to link any new files and install new vim plugins. **Note** You _must_ run
-`rcup` after pulling to ensure that all files in plugins are properly installed,
-but you can safely run `rcup` multiple times so update early and update often!
-
-More about rcm
---------------
-
-* [rcm for rc files in dotfiles repos - Thoughtbot Blog](https://thoughtbot.com/blog/rcm-for-rc-files-in-dotfiles-repos)
-* [Manage and share your dotfiles with rcm - Upcase](https://thoughtbot.com/upcase/videos/manage-and-share-your-dotfiles-with-rcm)
-
-
-What's in it?
--------------
-
-[vim](http://www.vim.org/) configuration:
-
-* Use [dracula](https://draculatheme.com/) as theme
-
-git configuration:
-
-* pull with rebase
-* reabse with autostash and autosquash
-* rerere enabled
-* ls, ll, lc, lnc, history aliases
-* pgp with krypton

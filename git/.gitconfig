@@ -1,0 +1,72 @@
+[user]
+	name = Mathias Karstädt
+	email = mathias.karstaedt@gmail.com
+[pull]
+	rebase = merges
+[core]
+	autocrlf = input
+	excludesfile = ~/.gitignore
+	editor = vim
+[merge]
+  tool = vimdiff
+	ff = false
+[mergetool]
+  keepBackup = false
+# 	tool = nvim
+# [mergetool "nvim"]
+#   cmd = lvim -d \"$LOCAL\" \"$MERGED\" \"$BASE\" \"$REMOTE\"
+[rebase]
+	autoStash = true
+	autosquash = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[rerere]
+	enabled = true
+[alias]
+	# log commands {{{
+	ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%an]" --decorate --date=relative
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [a:%an,c:%cn]" --decorate --numstat
+	lc = "!f() { git ll "$1"^.."$1"; }; f"
+  lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+	# log commands }}}
+	history = "!f() { git log --follow -p -- "$@"; }; f"
+  # sm = "!f() { git checkout "$1"; }; f"
+  # safe merge
+  sm = "!f() { git checkout "$1"; git pull; git checkout -; git merge --no-ff --no-edit "$1"; }; f"
+
+  # diffing {{{
+  difft = "!f() { GIT_EXTERNAL_DIFF=difft git diff --ext-diff "$@"; }; f"
+  logt = "!f() { GIT_EXTERNAL_DIFF=difft git log -p --ext-diff "$@"; }; f"
+  # }}}
+
+  # more {{{
+	swtich = switch
+	alias = config --get-regexp ^alias\\.
+  # more }}}
+[gpg]
+	program = gpg
+[commit]
+  # gpgSign = true
+[tag]
+  # forceSignAnnotated = true
+[diff]
+	tool = vimdiff
+	indentHeuristic = true
+[difftool]
+	prompt = false
+[sequence]
+	editor = interactive-rebase-tool
+[init]
+	defaultBranch = master
+[credential]
+	helper = osxkeychain
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[push]
+	default = current
+	autoSetupRemote = true
+[credential "https://dev.azure.com"]
+	useHttpPath = true
