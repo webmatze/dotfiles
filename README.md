@@ -8,9 +8,7 @@ We need `stow` to be able to automatically symlink the files.
 brew install stow
 ```
 
-
 ## Install
--------
 
 Clone this repo to your home directory:
 
@@ -23,7 +21,16 @@ Install the dotfiles:
 ```bash
 cd ~/dotfiles
 stow zsh
+stow tmux
 ```
+
+# Available configurations
+- fzf
+- git
+- tmux
+- vim
+- warp
+- zsh
 
 ## More about stow
 
