@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# zsh configuration
+# START: zsh configuration
 ## make history large
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000   # the number of items for the internal history list
@@ -17,6 +17,7 @@ unsetopt BEEP
 
 ## set prompt
 PROMPT="%n@%m %1~ %# "
+# END: zsh configuration
 
 # other configurations
 export PATH="/usr/local/sbin:$PATH"
@@ -39,6 +40,9 @@ export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/mysql@5.6/lib"
 export CPPFLAGS="-I/usr/local/opt/mysql@5.6/include"
 
+## MySQL Client
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+
 ## SSH
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
@@ -46,8 +50,16 @@ ssh-add ~/.ssh/id_ed25519
 
 # export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
-# aliases
+# START: aliases
 alias dcr='docker compose run --rm'
+if command -v lvim &> /dev/null; then
+    alias vim='lvim'
+fi
+if command -v bat &> /dev/null; then
+    alias cat='bat -pp --theme=Dracula '
+    alias less='bat --theme=Dracula '
+fi
+# END: aliases
 
 # START: autoload .env files
 # source: (https://github.com/johnhamelink/env-zsh/blob/master/env.plugin.zsh)
@@ -63,11 +75,5 @@ load-local-conf
 add-zsh-hook chpwd load-local-conf
 # END: autoload .env files
 
-
-
-
-
-
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-
+# initialize fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
