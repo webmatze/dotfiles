@@ -1,0 +1,11 @@
+---
+name: Check changed files with rubocop
+command: git status -s | grep -E '^ ?A|^ ?M|^\?\?' | awk '{print $2}' | xargs bin/rubocop --force-exclusion -a
+tags:
+  - ruby
+  - rubocop
+  - git
+description: Checks only changed and not commited ruby files using rubocop
+author: Mathias Karstädt
+author_url: "https://mathiaskarstaedt.de"
+shells: []

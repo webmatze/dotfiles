@@ -1,0 +1,11 @@
+---
+name: Wake Synology NAS
+command: wakeonlan 00:11:32:E0:97:D7
+tags:
+  - nas
+  - synology
+description: Sends magic WOL packages to synology nas
+author: Mathias Karstädt
+author_url: "https://mathiaskarstaedt.de"
+shells: []
+
