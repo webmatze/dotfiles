@@ -1,0 +1,10 @@
+---
+name: list latest git branches and select to check out
+command: git branch --no-merged=master --sort=-committerdate --format='%(refname:short)' | fzf --preview 'git log --oneline master..{1} {1}' | xargs git switch
+tags:
+  - git
+  - fzf
+description: uses fzf to display the local git branches that have not been merged and displays the commits
+author: Mathias Karstädt
+author_url: "https://mathiaskarstaedt.de"
+shells: []
