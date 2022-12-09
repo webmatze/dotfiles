@@ -34,6 +34,8 @@ return packer.startup(function(use)
   -- add more plugins here
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
   use("szw/vim-maximizer") -- maximizes and restores current window
+  use("tpope/vim-surround") -- surround insert (ys), delete (ds), change (cs)
+  use("vim-scripts/ReplaceWithRegister") -- needed for vim-surround
 
   -- add colorscheme here
   use("dracula/vim")
