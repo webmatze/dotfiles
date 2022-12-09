@@ -41,6 +41,7 @@ return packer.startup(function(use)
   use("vim-scripts/ReplaceWithRegister") -- needed for vim-surround
   use("nvim-tree/nvim-tree.lua") -- file explorer
   use("nvim-tree/nvim-web-devicons") -- for nvim-tree file icons
+  use("nvim-lualine/lualine.nvim") -- fancy statusline
 
   -- add colorscheme here
   use("dracula/vim")
