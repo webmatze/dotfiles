@@ -33,6 +33,7 @@ return packer.startup(function(use)
 
   -- add more plugins here
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
+  use("szw/vim-maximizer") -- maximizes and restores current window
 
   -- add colorscheme here
   use("dracula/vim")

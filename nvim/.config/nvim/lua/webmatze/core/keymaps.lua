@@ -46,4 +46,8 @@ keymap.set("n", "<leader>sv", "<C-w>v", { noremap = true }) -- split window vert
 keymap.set("n", "<leader>se", "<C-w>=", { noremap = true }) -- equalize window sizes
 keymap.set("n", "<leader>sx", ":close<CR>", { noremap = true }) -- close current window
 
+-- plugin keymaps
+
+-- vim-maximizer
+keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", { noremap = true }) -- toggle maximize window
 
