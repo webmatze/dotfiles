@@ -31,11 +31,16 @@ return packer.startup(function(use)
   -- packer can manage itself
   use("wbthomason/packer.nvim")
 
+  -- lua functions that are used by many plugins
+  use("nvim-lua/plenary.nvim")
+
   -- add more plugins here
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
   use("szw/vim-maximizer") -- maximizes and restores current window
   use("tpope/vim-surround") -- surround insert (ys), delete (ds), change (cs)
   use("vim-scripts/ReplaceWithRegister") -- needed for vim-surround
+  use("nvim-tree/nvim-tree.lua") -- file explorer
+  use("nvim-tree/nvim-web-devicons") -- for nvim-tree file icons
 
   -- add colorscheme here
   use("dracula/vim")
