@@ -62,3 +62,9 @@ vim.keymap.set('n', '<leader>sf', builtin.find_files, { noremap = true }) -- lis
 vim.keymap.set('n', '<leader>sg', builtin.live_grep, { noremap = true }) -- search string in dir
 vim.keymap.set('n', '<leader>sb', builtin.buffers, { noremap = true }) -- search buffers
 vim.keymap.set('n', '<leader>sw', builtin.grep_string, { noremap = true }) -- search word under cursor
+
+-- copilot keymaps are defined in plugins/copilot.lua
+-- local copilot = require('copilot.suggestion')
+-- vim.keymap.set('i', '<C-a>', copilot.accept(), { noremap = true }) -- accept suggestion copilot
+-- vim.keymap.set('i', '<C-d>', copilot.dismiss(), { noremap = true }) -- dismiss suggestion copilot
+-- vim.keymap.set('i', '<C-n>', copilot.next(), { noremap = true }) -- next suggestion copilot

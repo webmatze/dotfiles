@@ -51,6 +51,7 @@ return packer.startup(function(use)
   })
   use({'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }) -- native c zfz implementation
   -- END: telescope
+  use("zbirenbaum/copilot.lua") -- github copilot integration
 
   -- add colorscheme here
   use('folke/tokyonight.nvim')
