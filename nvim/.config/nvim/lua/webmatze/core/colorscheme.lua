@@ -1,6 +1,6 @@
--- set colorscheme to Dracula
-local status, _ = pcall(vim.cmd, "colorscheme dracula")
+-- set current colorscheme
+local status, _ = pcall(vim.cmd, "colorscheme tokyonight")
 if not status then
-  print("Dracula colorscheme not found")
+  print("Tokyonight colorscheme not found")
   return
 end

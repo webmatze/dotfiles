@@ -40,6 +40,7 @@ local conditions = {
 -- Config
 local config = {
   options = {
+    theme = 'tokyonight', -- use tokyonight theme
     -- Disable sections and component separators
     component_separators = '',
     section_separators = '',

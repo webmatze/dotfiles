@@ -53,7 +53,8 @@ return packer.startup(function(use)
   -- END: telescope
 
   -- add colorscheme here
-  use("dracula/vim")
+  use('folke/tokyonight.nvim')
+  -- use("dracula/vim")
 
   if packer_bootstrap then
     require("packer").sync()
