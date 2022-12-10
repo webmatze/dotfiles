@@ -6,8 +6,9 @@ local keymap = vim.keymap -- Keymap options
 vim.g.mapleader = " " -- leader key
 
 -- quit
-keymap.set("n", "<leader>q", ":q<CR>", {noremap = true})
-keymap.set("n", "<leader>Q", ":q!<CR>", {noremap = true})
+keymap.set("n", "<leader>c", ":q<CR>", { noremap = true }) -- normal close buffer
+keymap.set("n", "<leader>q", ":qa<CR>", { noremap = true }) -- safe close all
+keymap.set("n", "<leader>Q", ":qa!<CR>", { noremap = true }) -- unsafe close all
 
 -- clear search highlighting
 keymap.set("n", "<leader>h", ":noh<CR>", { noremap = true })
