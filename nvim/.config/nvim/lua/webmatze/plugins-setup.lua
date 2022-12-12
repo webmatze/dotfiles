@@ -53,6 +53,7 @@ return packer.startup(function(use)
   -- END: telescope
   use("zbirenbaum/copilot.lua") -- github copilot integration
   use("folke/which-key.nvim") -- show keybindings
+  use('rcarriga/nvim-notify') -- notifications
 
   -- add colorscheme here
   use('folke/tokyonight.nvim')
