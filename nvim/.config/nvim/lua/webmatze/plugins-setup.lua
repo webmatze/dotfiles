@@ -54,6 +54,7 @@ return packer.startup(function(use)
   use("zbirenbaum/copilot.lua") -- github copilot integration
   use("folke/which-key.nvim") -- show keybindings
   use('rcarriga/nvim-notify') -- notifications
+  use('goolord/alpha-nvim') -- dashboard
 
   -- add colorscheme here
   use('folke/tokyonight.nvim')

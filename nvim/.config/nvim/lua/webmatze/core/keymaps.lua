@@ -55,13 +55,17 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", { noremap = true }) -- tog
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true }) -- toggle nvim-tree
 
+-- alpha-nvim
+keymap.set("n", "<leader>;", ":Alpha<CR>", { noremap = true }) -- toggle alpha-nvim
+
 -- telescope
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>f', builtin.git_files, { noremap = true }) -- search only commited files
-vim.keymap.set('n', '<leader>sf', builtin.find_files, { noremap = true }) -- list files in current dir
-vim.keymap.set('n', '<leader>sg', builtin.live_grep, { noremap = true }) -- search string in dir
-vim.keymap.set('n', '<leader>sb', builtin.buffers, { noremap = true }) -- search buffers
-vim.keymap.set('n', '<leader>sw', builtin.grep_string, { noremap = true }) -- search word under cursor
+vim.keymap.set('n', '<leader>fg', builtin.git_files, { noremap = true }) -- search only commited files
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { noremap = true }) -- list files in current dir
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { noremap = true }) -- search string in dir
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { noremap = true }) -- search buffers
+vim.keymap.set('n', '<leader>fw', builtin.grep_string, { noremap = true }) -- search word under cursor
+vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { noremap = true }) -- search old files
 
 -- copilot keymaps are defined in plugins/copilot.lua
 -- local copilot = require('copilot.suggestion')
