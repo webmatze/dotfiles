@@ -38,28 +38,11 @@ zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 # END: zsh configuration
 
 # other configurations
-export PATH="/usr/local/sbin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"   # load lvim binary
-
-# java
-export JAVA_HOME=`/usr/libexec/java_home`
-
-# gpg / git
-export GPG_TTY=$(tty)
-
 ## rbenv
 # eval "$(rbenv init -)"
 
 ## asdf
 . /usr/local/opt/asdf/libexec/asdf.sh
-
-## MySQL
-export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/mysql@5.6/lib"
-export CPPFLAGS="-I/usr/local/opt/mysql@5.6/include"
-
-## MySQL Client
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
 ## SSH
 eval "$(ssh-agent -s)"
