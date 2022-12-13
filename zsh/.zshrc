@@ -57,8 +57,8 @@ ssh-add ~/.ssh/id_ed25519
 
 # START: aliases
 alias dcr='docker compose run --rm'
-if command -v lvim &> /dev/null; then
-    alias vim='lvim'
+if command -v nvim &> /dev/null; then
+    alias vim='nvim'
 fi
 if command -v bat &> /dev/null; then
     alias cat='bat -pp --theme=Dracula '
