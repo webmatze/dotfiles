@@ -15,6 +15,10 @@ setopt interactive_comments
 ## beeping is annoying
 unsetopt BEEP
 
+## completion
+autoload -U compinit; compinit
+_comp_options+=(globdots) # complete hidden files
+
 ## set prompt
 # Autoload zsh add-zsh-hook and vcs_info functions (-U autoload w/o substition, -z use zsh style)
 autoload -Uz add-zsh-hook vcs_info
