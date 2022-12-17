@@ -27,6 +27,7 @@ stow tmux
 # Available configurations
 - fzf
 - git
+- nvim
 - tmux
 - vim
 - warp
