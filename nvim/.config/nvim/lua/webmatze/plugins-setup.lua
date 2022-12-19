@@ -56,6 +56,16 @@ return packer.startup(function(use)
   use('rcarriga/nvim-notify') -- notifications
   use('goolord/alpha-nvim') -- dashboard
 
+  -- Autocompletion
+  use("hrsh7th/nvim-cmp") -- autocompletion
+  use("hrsh7th/cmp-buffer") -- autocompletion
+  use("hrsh7th/cmp-path") -- autocompletion
+
+  -- Snippets
+  use("L3MON4D3/LuaSnip") -- snippets
+  use("saadparwaiz1/cmp_luasnip") -- snippets
+  use("rafamadriz/friendly-snippets") -- snippets
+
   -- add colorscheme here
   use('folke/tokyonight.nvim')
   -- use("dracula/vim")
