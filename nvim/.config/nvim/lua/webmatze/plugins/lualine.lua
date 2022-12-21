@@ -9,18 +9,19 @@ end
 
 -- Color table for highlights
 -- stylua: ignore
+-- tokyonight
 local colors = {
-  bg       = '#202328',
-  fg       = '#bbc2cf',
-  yellow   = '#ECBE7B',
-  cyan     = '#008080',
-  darkblue = '#081633',
-  green    = '#98be65',
-  orange   = '#FF8800',
-  violet   = '#a9a1e1',
-  magenta  = '#c678dd',
-  blue     = '#51afef',
-  red      = '#ec5f67',
+  bg = "#1a1b26",
+  fg = "#c0caf5",
+  yellow = "#fabd2f",
+  cyan = "#008080",
+  darkblue = "#081633",
+  green = "#afd700",
+  orange = "#FF8800",
+  violet = "#a9a1e1",
+  magenta = "#d16d9e",
+  blue = "#51afef",
+  red = "#ec5f67",
 }
 
 local conditions = {
@@ -95,7 +96,7 @@ ins_left {
 ins_left {
   -- mode component
   function()
-    return ''
+    return '' -- ''
   end,
   color = function()
     -- auto change color according to neovims mode
@@ -187,26 +188,26 @@ ins_right {
   'o:encoding', -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
   cond = conditions.hide_in_width,
-  color = { fg = colors.green, gui = 'bold' },
+  color = { fg = colors.violet, gui = 'bold' },
 }
 
 ins_right {
   'fileformat',
   fmt = string.upper,
   icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
-  color = { fg = colors.green, gui = 'bold' },
+  color = { fg = colors.violet, gui = 'bold' },
 }
 
 ins_right {
   'branch',
   icon = '',
-  color = { fg = colors.violet, gui = 'bold' },
+  color = { fg = colors.green, gui = 'bold' },
 }
 
 ins_right {
   'diff',
   -- Is it me or the symbol for modified us really weird
-  symbols = { added = ' ', modified = '柳 ', removed = ' ' },
+  symbols = { added = ' ', modified = '柳', removed = ' ' },
   diff_color = {
     added = { fg = colors.green },
     modified = { fg = colors.orange },
