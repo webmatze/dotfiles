@@ -42,6 +42,8 @@ return packer.startup(function(use)
   use("nvim-tree/nvim-tree.lua") -- file explorer
   use("nvim-tree/nvim-web-devicons") -- for nvim-tree file icons
   use("nvim-lualine/lualine.nvim") -- fancy statusline
+  use("mbbill/undotree") -- undo history
+
   -- START: telescope
   use({ "nvim-treesitter/nvim-treesitter", run = ':TSUpdate' }) -- finder/preview
   use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags

@@ -49,6 +49,9 @@ keymap.set("n", "<leader>sx", ":close<CR>", { noremap = true }) -- close current
 
 -- plugin keymaps
 
+-- undo tree
+keymap.set("n", "<leader>u", ":UndotreeToggle<CR>", { noremap = true })
+
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", { noremap = true }) -- toggle maximize window
 
