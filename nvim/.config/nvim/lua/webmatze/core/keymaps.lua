@@ -53,7 +53,7 @@ keymap.set("n", "<leader>sx", ":close<CR>", { noremap = true }) -- close current
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", { noremap = true }) -- toggle maximize window
 
 -- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { noremap = true }) -- toggle nvim-tree
+keymap.set("n", "<leader>e", ":NvimTreeFindFileToggle<CR>", { noremap = true }) -- toggle nvim-tree
 
 -- alpha-nvim
 keymap.set("n", "<leader>;", ":Alpha<CR>", { noremap = true }) -- toggle alpha-nvim
