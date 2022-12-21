@@ -16,9 +16,9 @@ dashboard.section.header.val = {
 [[            |_| |_|\_/ |_|_| |_| |_|            ]],
 }
 dashboard.section.buttons.val = {
-  dashboard.button("f", '  Find File', ':Telescope find_files<CR>'),
   dashboard.button("r", '  Recents',':Telescope oldfiles<CR>'),
-  dashboard.button("n", '洛  New File', ':enew<CR>'),
+  dashboard.button("f", '  Find File', ':Telescope find_files<CR>'),
+  dashboard.button("n", '  New File', ':enew<CR>'),
   dashboard.button("s", '  Search Word', ':Telescope live_grep<CR>' ),
   dashboard.button("q", '  Quit', ':qa!<CR>' ),
 }
