@@ -3,6 +3,9 @@ local opt = vim.opt -- Global options
 -- line numbers
 opt.number = true -- show line numbers
 opt.relativenumber = true -- show relative line numbers
+opt.scrolloff = 8 -- lines of context
+opt.sidescrolloff = 8 -- columns of context
+opt.updatetime = 100 -- faster completion
 
 -- tabs & indents
 opt.tabstop = 2 -- number of visual spaces per TAB
@@ -18,6 +21,7 @@ opt.wrap = false -- display lines as one long line
 
 -- search
 opt.hlsearch = true -- highlight all matches on previous search
+opt.incsearch = true -- show search matches incrementally
 opt.ignorecase = true -- ignore case in search patterns
 opt.smartcase = true -- override 'ignorecase' if search pattern contains upper case
 

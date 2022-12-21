@@ -5,6 +5,18 @@ local keymap = vim.keymap -- Keymap options
 -------------------------
 vim.g.mapleader = " " -- leader key
 
+-- visual mode
+keymap.set("v", "<leader>y", '"+y') -- copy to system clipboard in visual mode
+keymap.set("v", "<leader>p", '"+p') -- paste from system clipboard in visual mode
+keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- move line down
+keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- move line up
+
+-- normal mode
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
 -- quit
 keymap.set("n", "<leader>c", ":q<CR>", { noremap = true }) -- normal close buffer
 keymap.set("n", "<leader>q", ":qa<CR>", { noremap = true }) -- safe close all
