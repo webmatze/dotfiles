@@ -43,13 +43,13 @@ return packer.startup(function(use)
   use("nvim-tree/nvim-web-devicons") -- for nvim-tree file icons
   use("nvim-lualine/lualine.nvim") -- fancy statusline
   use("mbbill/undotree") -- undo history
+  use("lewis6991/gitsigns.nvim") -- git signs in gutter
 
   -- START: telescope
   use({ "nvim-treesitter/nvim-treesitter", run = ':TSUpdate' }) -- finder/preview
   use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
   use({
     "nvim-telescope/telescope.nvim", branch = "0.1.x", -- the telescope plugin
-    requires = { { 'nvim-lua/plenary.nvim' } }
   })
   use({'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }) -- native c zfz implementation
   -- END: telescope
