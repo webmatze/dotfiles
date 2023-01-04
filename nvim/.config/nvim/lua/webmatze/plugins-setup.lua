@@ -81,6 +81,20 @@ return packer.startup(function(use)
     }
   })
 
+  -- markdown preview
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && yarn install",
+    setup = function()
+      vim.g.mkdp_auto_start = 0
+      vim.g.mkdp_auto_close = 0
+      vim.g.mkdp_refresh_slow = 0
+      vim.g.mkdp_echo_preview_url = 1
+      vim.g.mkdp_browser = "firefox"
+    end,
+    ft = "markdown",
+  })
+
   -- add colorscheme here
   use('folke/tokyonight.nvim')
   -- use("dracula/vim")
