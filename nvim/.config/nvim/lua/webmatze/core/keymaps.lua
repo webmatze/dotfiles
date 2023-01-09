@@ -12,10 +12,14 @@ keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- move line down
 keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- move line up
 
 -- normal mode
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
+keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "<C-u>", "<C-u>zz")
+keymap.set("n", "n", "nzzzv")
+keymap.set("n", "N", "Nzzzv")
+keymap.set("n", "<C-k>", ":TmuxNavigateUp<CR>", { noremap = true }) -- tmux navigation
+keymap.set("n", "<C-j>", ":TmuxNavigateDown<CR>", { noremap = true }) -- tmux navigation
+keymap.set("n", "<C-h>", ":TmuxNavigateLeft<CR>", { noremap = true }) -- tmux navigation
+keymap.set("n", "<C-l>", ":TmuxNavigateRight<CR>", { noremap = true }) -- tmux navigation
 
 -- quit
 keymap.set("n", "<leader>c", ":q<CR>", { noremap = true }) -- normal close buffer

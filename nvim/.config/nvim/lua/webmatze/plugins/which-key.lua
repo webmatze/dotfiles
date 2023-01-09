@@ -58,7 +58,7 @@ whichkey.register({
     b = "find buffers",
     w = "find word under cursor",
     o = "find old (recent) files",
-  }, 
+  },
 }, {
   mode = "n",
   buffer = nil,
