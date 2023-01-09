@@ -88,6 +88,15 @@ return packer.startup(function(use)
     ft = "markdown",
   })
 
+  -- mindmap
+  use({
+    "phaazon/mind.nvim",
+    branch = 'v2.2',
+    config = function()
+      require('mind').setup()
+    end
+  })
+
   -- add colorscheme here
   use('folke/tokyonight.nvim')
   -- use("dracula/vim")
