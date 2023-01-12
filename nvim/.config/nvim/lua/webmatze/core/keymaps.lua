@@ -29,6 +29,9 @@ keymap.set("n", "<leader>Q", ":qa!<CR>", { noremap = true }) -- unsafe close all
 -- clear search highlighting
 keymap.set("n", "<leader>h", ":noh<CR>", { noremap = true })
 
+-- some fun with cellular automata
+keymap.set("n", "<leader>d", "<cmd>CellularAutomaton make_it_rain<CR>", { noremap = true })
+
 -- delete single character without copying to register
 keymap.set("n", "x", '"_x', { noremap = true })
 

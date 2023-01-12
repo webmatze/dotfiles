@@ -57,6 +57,7 @@ return packer.startup(function(use)
   use("folke/which-key.nvim") -- show keybindings
   use('rcarriga/nvim-notify') -- notifications
   use('goolord/alpha-nvim') -- dashboard
+  use('Eandrju/cellular-automaton.nvim') -- cellular automata
 
   -- LSP Zero
   use({
