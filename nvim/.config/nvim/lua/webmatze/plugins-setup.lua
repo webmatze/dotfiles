@@ -82,6 +82,14 @@ return packer.startup(function(use)
     }
   })
 
+  -- fidget
+  use({
+    'j-hui/fidget.nvim',
+    config = function ()
+      require('fidget').setup({})
+    end
+  })
+
   -- markdown preview
   use({
     "iamcco/markdown-preview.nvim",
