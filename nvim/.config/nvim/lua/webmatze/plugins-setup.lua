@@ -110,6 +110,9 @@ return packer.startup(function(use)
   use('folke/tokyonight.nvim')
   -- use("dracula/vim")
 
+  -- add transparancy
+  use('xiyaowong/nvim-transparent')
+
   if packer_bootstrap then
     require("packer").sync()
   end
