@@ -31,6 +31,17 @@ font:
     style: Italic
   size: 18
 
+key_bindings:
+  - { key: 28,      mods: Alt, chars: "{" }
+  - { key: 25,      mods: Alt, chars: "}" }
+  - { key: 37,      mods: Alt, chars: "@" }
+  - { key: 26,      mods: Alt|Shift, chars: "\\" }
+  - { key: 26,      mods: Alt, chars: "|" }
+  - { key: 45,      mods: Alt, chars: "~" }
+  - { key: 23,      mods: Alt, chars: "[" }
+  - { key: 22,      mods: Alt, chars: "]" }
+  - { key: 19,      mods: Shift, chars: "§" }
+
 # Colors (Dracula)
 colors:
   # Default colors
