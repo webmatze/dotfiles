@@ -2,16 +2,14 @@ env:
   TERM: alacritty
 
 window:
-  opacity: 0.9
+  opacity: 0.97
   dimensions:
     columns: 160
     lines: 52
-  padding:
-    x: 0
-    y: 0
-  decorations: none
+  decorations: buttonless
   startup_mode: Windowed
   dynamic_title: true
+  dynamic_padding: true
 
 selection:
   save_to_clipboard: true
@@ -29,7 +27,10 @@ font:
   italic:
     family: SauceCodePro Nerd Font
     style: Italic
-  size: 18
+  size: 20.0
+  offset:
+    x: 0
+    y: 0
 
 key_bindings:
   - { key: 28,      mods: Alt, chars: "{" }
