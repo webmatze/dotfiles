@@ -1,0 +1,32 @@
+env:
+  TERM: alacritty
+
+window:
+  opacity: 0.9
+  dimensions:
+    columns: 160
+    lines: 52
+  padding:
+    x: 0
+    y: 0
+  decorations: none
+  startup_mode: Windowed
+  dynamic_title: true
+
+selection:
+  save_to_clipboard: true
+
+mouse:
+  hide_when_typing: true
+
+font:
+  normal:
+    family: SauceCodePro Nerd Font
+    style: Regular
+  bold:
+    family: SauceCodePro Nerd Font
+    style: Bold
+  italic:
+    family: SauceCodePro Nerd Font
+    style: Italic
+  size: 18
