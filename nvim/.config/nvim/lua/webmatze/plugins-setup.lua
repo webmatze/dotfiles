@@ -107,6 +107,10 @@ return packer.startup(function(use)
     end
   })
 
+  -- vim-dadbod
+  use('tpope/vim-dadbod')
+  use('kristijanhusak/vim-dadbod-ui')
+
   -- add colorscheme here
   use('folke/tokyonight.nvim')
   -- use("dracula/vim")
