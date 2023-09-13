@@ -75,6 +75,8 @@ autoload -U add-zsh-hook
 load-local-conf() {
      # check file exists, is regular file and is readable:
      if [[ -f .env && -r .env ]]; then
+       echo "Loading .env"
+       setopt localoptions allexport
        source .env
      fi
 }
