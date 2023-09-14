@@ -41,7 +41,6 @@ return packer.startup(function(use)
   use("vim-scripts/ReplaceWithRegister") -- needed for vim-surround
   use("nvim-tree/nvim-tree.lua") -- file explorer
   use("nvim-tree/nvim-web-devicons") -- for nvim-tree file icons
-  use("nvim-lualine/lualine.nvim") -- fancy statusline
   use("mbbill/undotree") -- undo history
   use("lewis6991/gitsigns.nvim") -- git signs in gutter
 
@@ -54,6 +53,15 @@ return packer.startup(function(use)
   use({'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }) -- native c zfz implementation
   -- END: telescope
   use("zbirenbaum/copilot.lua") -- github copilot integration
+  use({
+    "jonahgoldwastaken/copilot-status.nvim",
+    -- after = { "zbirenbaum/copilot.lua" },
+    -- event = "BufReadPost",
+  })
+  use({
+    "nvim-lualine/lualine.nvim",
+    -- after = { "jonahgoldwastaken/copilot-status.nvim" },
+  }) -- fancy statusline
   use("folke/which-key.nvim") -- show keybindings
   use('rcarriga/nvim-notify') -- notifications
   use('goolord/alpha-nvim') -- dashboard

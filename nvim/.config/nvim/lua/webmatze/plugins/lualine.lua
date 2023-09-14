@@ -184,6 +184,16 @@ ins_left {
 }
 
 -- Add components to right sections
+-- show copilot status
+ins_right {
+  function()
+    return require("copilot_status").status_string()
+  end,
+  -- cond = function() return require("copilot_status").enabled() end,
+  -- icon = '',
+  color = { fg = '#ffffff', gui = 'bold' },
+}
+
 ins_right {
   'o:encoding', -- option component same as &encoding in viml
   fmt = string.upper, -- I'm not sure why it's upper case either ;)
