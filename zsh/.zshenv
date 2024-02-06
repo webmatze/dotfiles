@@ -7,6 +7,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/Library/Application Support"
 export XDG_CACHE_HOME="$HOME/Library/Caches"
 
+## term
+export TERM=screen-256color
+
 ## for zsh
 export ZDOTDIR="$HOME"
 
