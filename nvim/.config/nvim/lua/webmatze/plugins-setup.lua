@@ -47,6 +47,8 @@ return packer.startup(function(use)
   -- START: telescope
   use({ "nvim-treesitter/nvim-treesitter", run = ':TSUpdate' }) -- finder/preview
   use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
+  -- text objects
+  use({ "nvim-treesitter/nvim-treesitter-textobjects", after = "nvim-treesitter" })
   use({
     "nvim-telescope/telescope.nvim", branch = "0.1.x", -- the telescope plugin
   })

@@ -36,8 +36,8 @@ keymap.set("n", "<leader>d", "<cmd>CellularAutomaton make_it_rain<CR>", { norema
 keymap.set("n", "x", '"_x', { noremap = true })
 
 -- increment numbers
-keymap.set("n", "<leader>+", "<C-a>", { noremap = true }) -- increment number
-keymap.set("n", "<leader>-", "<C-x>", { noremap = true }) -- decrement numbers
+-- keymap.set("n", "<leader>+", "<C-a>", { noremap = true }) -- increment number
+-- keymap.set("n", "<leader>-", "<C-x>", { noremap = true }) -- decrement numbers
 
 -- buffer navigation
 keymap.set("n", "<leader>bn", ":bn<CR>", { noremap = true }) -- next buffer
@@ -63,8 +63,26 @@ keymap.set("n", "<leader>wL", "<C-w>5>", { noremap = true }) -- move window to r
 -- split navigation
 keymap.set("n", "<leader>sh", "<C-w>s", { noremap = true }) -- split window horizontally
 keymap.set("n", "<leader>sv", "<C-w>v", { noremap = true }) -- split window vertically
+keymap.set("n", "<leader>|", ":vsplit<CR>", { noremap = true, desc = "split window vertically" }) -- split window vertically
+keymap.set("n", "<leader>-", ":split<CR>", { noremap = true, desc = "split window horizontally" }) -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=", { noremap = true }) -- equalize window sizes
 keymap.set("n", "<leader>sx", ":close<CR>", { noremap = true }) -- close current window
+
+-- lsp
+keymap.set("n", "<leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true }) -- go to definition
+keymap.set("n", "<leader>gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true }) -- go to declaration
+keymap.set("n", "<leader>gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", { noremap = true }) -- go to implementation
+keymap.set("n", "<leader>gr", "<cmd>lua vim.lsp.buf.references()<CR>", { noremap = true }) -- go to references
+keymap.set("n", "<leader>gs", "<cmd>lua vim.lsp.buf.document_symbol()<CR>", { noremap = true }) -- go to 
+keymap.set("n", "<leader>gR", "<cmd>lua vim.lsp.buf.rename()<CR>", { noremap = true }) -- rename
+keymap.set("n", "<leader>ga", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true }) -- code action
+keymap.set("n", "<leader>gf", "<cmd>lua vim.lsp.buf.formatting()<CR>", { noremap = true }) -- format
+keymap.set("n", "<leader>gh", "<cmd>lua vim.lsp.buf.hover()<CR>", { noremap = true }) -- hover
+-- TODO: configure diagnostics
+keymap.set("n", "<leader>gl", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", { noremap = true }) -- line diagnostics
+keymap.set("n", "<leader>gL", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", { noremap = true }) -- line diagnostics (all)
+keymap.set("n", "<leader>gn", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", { noremap = true }) -- next diagnostic
+keymap.set("n", "<leader>gN", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", { noremap = true }) -- previous diagnostic
 
 -- plugin keymaps
 
@@ -82,12 +100,12 @@ keymap.set("n", "<leader>;", ":Alpha<CR>", { noremap = true }) -- toggle alpha-n
 
 -- telescope
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>fg', builtin.git_files, { noremap = true }) -- search only commited files
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { noremap = true }) -- list files in current dir
-vim.keymap.set('n', '<leader>fl', builtin.live_grep, { noremap = true }) -- search string in dir
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { noremap = true }) -- search buffers
-vim.keymap.set('n', '<leader>fw', builtin.grep_string, { noremap = true }) -- search word under cursor
-vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { noremap = true }) -- search old files
+keymap.set('n', '<leader>fg', builtin.git_files, { noremap = true }) -- search only commited files
+keymap.set('n', '<leader>ff', builtin.find_files, { noremap = true }) -- list files in current dir
+keymap.set('n', '<leader>fl', builtin.live_grep, { noremap = true }) -- search string in dir
+keymap.set('n', '<leader>fb', builtin.buffers, { noremap = true }) -- search buffers
+keymap.set('n', '<leader>fw', builtin.grep_string, { noremap = true }) -- search word under cursor
+keymap.set('n', '<leader>fo', builtin.oldfiles, { noremap = true }) -- search old files
 
 -- copilot keymaps are defined in plugins/copilot.lua
 -- local copilot = require('copilot.suggestion')

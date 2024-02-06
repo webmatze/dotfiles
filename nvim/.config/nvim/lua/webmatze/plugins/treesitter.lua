@@ -14,6 +14,22 @@ treesitter.setup({
   indent = { enable = true },
   -- enable autotagging (w/ nvim-ts-autotag plugin)
   autotag = { enable = true },
+  -- enable textobjects (w/ nvim-treesitter-textobjects plugin)
+  textobjects = {
+    select = {
+      enable = true,
+      -- automatically jump forward to textobj, similar to targets.vim 
+      lookahead = true,
+      -- keymaps
+      keymaps = {
+        -- You can use the capture groups defined in textobjects.scm
+        ["af"] = "@function.outer",
+        ["if"] = "@function.inner",
+        ["ac"] = "@class.outer",
+        ["ic"] = "@class.inner",
+      },
+    },
+  },
   -- ensure these language parsers are installed
   ensure_installed = {
     "ruby",

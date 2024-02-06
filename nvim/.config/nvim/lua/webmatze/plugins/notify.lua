@@ -5,4 +5,5 @@ end
 
 notify.setup({
   timeout = 3000,
+  background_colour = "#1e222a",
 })
