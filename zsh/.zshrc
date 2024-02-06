@@ -46,7 +46,7 @@ zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 # eval "$(rbenv init -)"
 
 ## asdf
-. /usr/local/opt/asdf/libexec/asdf.sh
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 ## SSH
 eval "$(ssh-agent -s)"

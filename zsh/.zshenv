@@ -21,6 +21,8 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 
 ## make local bins available
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"   # load lvim binary
 
