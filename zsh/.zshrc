@@ -58,10 +58,22 @@ ssh-add ~/.ssh/id_ed25519
 # START: aliases
 alias dcr='docker compose run --rm'
 if command -v nvim &> /dev/null; then
-    alias vim='nvim'
+    alias nvim_lazy='NVIM_APPNAME=nvim_lazy nvim'
+    alias vim='nvim_lazy'
     if command -v fd &> /dev/null; then
-      alias v='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
+      alias v='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs vim'
     fi
+    function nvims() {
+      items=("default" "nvim_lazy") #  "kickstart" "LazyVim" "NvChad" "AstroNvim"
+      config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+      if [[ -z $config ]]; then
+        echo "Nothing selected"
+        return 0
+      elif [[ $config == "default" ]]; then
+        config=""
+      fi
+      NVIM_APPNAME=$config nvim $@
+    }
 fi
 if command -v bat &> /dev/null; then
     alias cat='bat -pp --theme=Dracula '
