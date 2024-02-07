@@ -49,14 +49,15 @@ zstyle ':vcs_info:git:*' actionformats '(%b|%a%u%c)'
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 ## SSH
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_rsa
-ssh-add ~/.ssh/id_ed25519
+# I am using the 1Password ssh agent
+# eval "$(ssh-agent -s)"
+# ssh-add ~/.ssh/id_rsa
+# ssh-add ~/.ssh/id_ed25519
 
 # export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # START: aliases
-alias dcr='docker compose run --rm'
+alias dcr='docker-compose run --rm'
 if command -v nvim &> /dev/null; then
     alias nvim_lazy='NVIM_APPNAME=nvim_lazy nvim'
     alias vim='nvim_lazy'

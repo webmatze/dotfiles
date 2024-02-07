@@ -1,6 +1,7 @@
 [user]
 	name = Mathias Karstädt
 	email = mathias.karstaedt@gmail.com
+	signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDF25jhLV0pU61kgP1vn+H6WOcfzwaO6PvlI4g+gS85PHxZKhkM7zkTOS6yU+FPsUaX/gxN9R+UzeefxYpus0apj8NuonRApOD5mg4QY1TX2WhhkI5Tz2bGstOyLBKMJ0iAG18pQPn1tHzqU87vcnB4cEACzR6rUn1xNRgUDOwPiooy3e6Pe+1W1uvAoB3vaNs9GaOUGbrWpBNHbCAp0PIkd72yDTDTzFZ74l/3/tgFnk9ti10twAtTmvFYfpWfyBRNj1Q2s84qPco7L2/opsn4MCSxjGGoSvDbBKvh9zcOE0t7Aas5M2s81aJZvlWsqV5FpEEA4McEMZvc1wttSm4ml7zqMbzMT+8/yP/vFvrXIL10mpimF3cHMShqP5MF44u9H/1fCzN1vjvO+wkrgvR+eBeCnmwjvlJ3IA/guo+jUZeBhOlMyLM52KOSEiwDE46GaijfQpok5KDteHQ/Ec+jivx9HJlejKw03zXn91b9gfwHACWcNTx80QoaLBilOzrpWd/Xehmg/pWlKysbDgcI+nVof9+QSf72RPz6LUmuExUekzfyB7+8iHs3lpXW+KaZaUfutWN84n0gG444wN6L4qpIEMT5JmS0kUlnJGR2HPBPusWNDYZMuJaS3W66MvjttsonWsFuH6TDGyD3V9LyJD8PVD5P9a5sTxUBR/xzzw==
 [pull]
 	rebase = merges
 [core]
@@ -55,9 +56,11 @@
 	alias = config --get-regexp ^alias\\.
   # more }}}
 [gpg]
-	program = gpg
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [commit]
-  # gpgSign = true
+	gpgsign = true
 [tag]
   # forceSignAnnotated = true
 [diff]
@@ -70,8 +73,6 @@
 [init]
 	defaultBranch = master
 [credential]
-	helper = osxkeychain
-	helper = 
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [push]
 	default = current

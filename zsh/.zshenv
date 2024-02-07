@@ -33,9 +33,9 @@ export JAVA_HOME=`/usr/libexec/java_home`
 export GPG_TTY=$(tty)
 
 ## MySQL
-export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/mysql@5.6/lib"
-export CPPFLAGS="-I/usr/local/opt/mysql@5.6/include"
+# export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+# export LDFLAGS="-L/usr/local/opt/mysql@5.6/lib"
+# export CPPFLAGS="-I/usr/local/opt/mysql@5.6/include"
 
 ## MySQL Client
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
@@ -67,4 +67,4 @@ export FZF_DEFAULT_OPTS="--height 60% \
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -n 10'"
 
 ## import cargo environment variables
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
