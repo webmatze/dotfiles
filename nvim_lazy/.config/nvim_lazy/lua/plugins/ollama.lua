@@ -1,3 +1,5 @@
+-- Install ollama: brew install ollama
+-- Install codellama model: ollama pull codellama:latest
 return {
   "nomnivore/ollama.nvim",
   dependencies = {
@@ -28,6 +30,6 @@ return {
   ---@type Ollama.Config
   opts = {
     -- your configuration overrides
-    model = "gemma:latest",
+    model = "codellama:latest",
   },
 }
